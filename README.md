@@ -1,2 +1,2 @@
 # attention-exploration
-visualizing transformer interpretability
+Visualizing the attention mechanism in transformer models.
