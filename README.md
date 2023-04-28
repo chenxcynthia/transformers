@@ -5,7 +5,7 @@ Spring 2023 Independent Study, research conducted under the mentorship of Profes
  
 There are two separate parts to my research:
 1. [Visualizing Transformer Attention](#I.-Visualizing-Transformer-Attention)
-2. [Exploring Induction Heads in BERT](#II.-Exploring-Induction Heads-in-BERT)
+2. [Exploring Induction Heads in BERT](#II.-Exploring-Induction-Heads-in-BERT)
 
 ## I. Visualizing Transformer Attention
 
