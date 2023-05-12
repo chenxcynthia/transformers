@@ -5,7 +5,8 @@ Transformer models are improving at a rapid pace, making it of paramount importa
 1. [Visualizing Transformer Attention](#I.-Visualizing-Transformer-Attention)
 2. [Exploring Induction Heads in BERT](#II.-Exploring-Induction-Heads-in-BERT)
 
-This report presents the methods and results of an independent research study conducted over the course of January to April 2023 at the [Harvard Insight and Interaction Lab](https://insight.seas.harvard.edu/) under the direct mentorship of Professor Martin Wattenberg, Professor Fernanda Viégas, and Catherine Yeh.
+This report presents the methods and results of an independent research study conducted over the course of January to April 2023 at the [Harvard Insight and Interaction Lab](https://insight.seas.harvard.edu/) under the direct mentorship of Professor Martin Wattenberg, Professor Fernanda Viégas, and Catherine Yeh. The full write-up of this project can be found [here](Paper.pdf).
+
 
 
 ## I. Visualizing Transformer Attention
