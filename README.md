@@ -20,11 +20,11 @@ vectors:
 
 $$ \texttt{attention}(q, k, v) = \textrm{softmax}(\frac{qk^T}{\sqrt{d_k}})v$$
 
-We see that attention directly corresponds to the dot product between the query and key vector. Therefore, if we are aiming for *small distance* to be a proxy for *high attention*, then we want the query-key dot product and distance to have a strong, inverse correlation. Put mathematically, we want the correlation between $$\texttt{dot-product}(q, k)$$ and $$\texttt{distance}(q, k)$$ to be as close to -1 as possible.
+We see that attention directly corresponds to the dot product between the query and key vector. Therefore, if we are aiming for *small distance* to be a proxy for *high attention*, then we want the query-key dot product and distance to have a strong, inverse correlation. Put mathematically, we want the correlation between $\texttt{dot-product}(q, k)$ and $\texttt{distance}(q, k)$ to be as close to -1 as possible.
 
 **Optimizing correlation.** How can we optimize the correlation between the dot product and distance between queries and keys without losing the integrity of the attention computation? Luckily, there are two ``free parameters'' when computing attention: translation and scaling. The operations of *translation* (shifting query and key vectors by a constant vector) and *scaling in opposite directions* (multiplying query vectors by $c$ and dividing key vectors by $c$) can both be performed without changing the resulting attention value. In the following experiments, we largely focus on scaling and identifying the scaling constant $c$ that provides the best correlation between dot product and distance. 
 
-To determine the optimal value of $c$, we can define a *weighted correlation *metric that places heavier weight on query-key pairs with smaller distances, since we care most about nearby queries and keys in the joint visualization. We first computed a distance threshold $$d$$, defined as the 0.5 percentile value of the distance distribution within a specific attention head. For every query-key pair with distance $d_i < d$, we compute the weighted correlation as follows:
+To determine the optimal value of $c$, we can define a *weighted correlation *metric that places heavier weight on query-key pairs with smaller distances, since we care most about nearby queries and keys in the joint visualization. We first computed a distance threshold $d$, defined as the 0.5 percentile value of the distance distribution within a specific attention head. For every query-key pair with distance $d_i < d$, we compute the weighted correlation as follows:
 
 $$ \texttt{weighted-corr}(x, y, w) = \frac{\textrm{cov}(x, y; w)}{\sqrt{\textrm{cov}(x, x; w) \textrm{cov}(y, y; w)}}$$
 
@@ -34,6 +34,6 @@ Building off of the weighted correlation metric, we defined a second optimizatio
 
 A final metric that we experimented with is the *ratio of the median query norm to the median key norm*. Differences in norm can cause distance and dot product to diverge from one another; as such, we reasoned that standardizing the query and key norms would bring the correlation closer. Rather than maximizing the correlation here, we simply set $c$ to be the square root of the ratio itself, as scaling by $c$ will automatically standardize the query and key norms.
 
-For each attention head, we can thus choose the scale factors $c$ that optimize the three metrics described above. For each of the metrics, we ran experiments with constants  $$c \in [0.2, 0.4, 0.8, 1, 1.25, 2.5, 5]$$. Future work could explore the results of a greater range and granularity of constant values. The optimal scaling constants for each metric are displayed in the heatmaps in Figure 1 below.
+For each attention head, we can thus choose the scale factors $c$ that optimize the three metrics described above. For each of the metrics, we ran experiments with constants  $c \in [0.2, 0.4, 0.8, 1, 1.25, 2.5, 5]$. Future work could explore the results of a greater range and granularity of constant values. The optimal scaling constants for each metric are displayed in the heatmaps in Figure 1 below.
 
 ## II. Exploring Induction Heads in BERT
