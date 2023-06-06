@@ -28,7 +28,7 @@ To determine the optimal value of $c$, we can define a *weighted correlation *me
 
 $$ \texttt{weighted-corr}(x, y, w) = \frac{\textrm{cov}(x, y; w)}{\sqrt{\textrm{cov}(x, x; w) \textrm{cov}(y, y; w)}}$$
 
-The weights $$w$$ are defined as $$(d - d_i)^2$$ which assigns more weight to query-key pairs that are closer to one another. We then choose the value of $c$ that gives a weighted correlation closest to -1.
+The weights $w$ are defined as $(d - d_i)^2$ which assigns more weight to query-key pairs that are closer to one another. We then choose the value of $c$ that gives a weighted correlation closest to -1.
 
 Building off of the weighted correlation metric, we defined a second optimization metric (*weighted correlation, scaled*) as follows. Within each scaling factor, we also kept a count of the number of instances of key-query pairs with distance less than the distance threshold. We then enumerated the number of instances across all the attention heads and normalized all weighted correlations within the scaling factor by this count. Again, we choose a value of $c$ that brings this scaled weighted correlation value closest to -1.
 
