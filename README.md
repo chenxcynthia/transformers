@@ -1,15 +1,19 @@
 # Exploring Transformer Interpretability
 
-Transformer models are improving at a rapid pace, making it of paramount importance to develop methods to explain, reverse-engineer, and visualize their inner workings. In this work, we study the interpretability of transformer models through a series of experiments divided into two parts:
+Transformer models are improving at a rapid pace, making it of paramount importance to develop methods to explain, reverse-engineer, and visualize their inner workings. In this project, we study the interpretability of transformer models through a series of experiments divided into two parts:
 
-1. [Visualizing Transformer Attention](#I.-Visualizing-Transformer-Attention)
-2. [Exploring Induction Heads in BERT](#II.-Exploring-Induction-Heads-in-BERT)
+1. [Visualizing Transformer Attention](https://github.com/chenxcynthia/interp-research-2023/tree/main/Attention%20Visualization)
+   - Results published in paper [AttentionViz: A Global View of Transformer Attention](https://arxiv.org/pdf/2305.03210.pdf).
+3. [Exploring Induction Heads in BERT](https://github.com/chenxcynthia/interp-research-2023/tree/main/Induction%20Heads)
 
-This report presents the methods and results of an independent research study conducted over the course of January to April 2023 at the [Harvard Insight and Interaction Lab](https://insight.seas.harvard.edu/) under the mentorship of Catherine Yeh and supervision of Professor Martin Wattenberg and Professor Fernanda Viégas. The full write-up of this project can be found [here](Paper.pdf).
+<!-- (#I.-Visualizing-Transformer-Attention)
+(#II.-Exploring-Induction-Heads-in-BERT) -->
+
+These are the methods and results of an independent research study conducted over the course of January to April 2023 at the [Harvard Insight and Interaction Lab](https://insight.seas.harvard.edu/) under the mentorship of [Catherine Yeh](https://catherinesyeh.github.io/) and supervision of Professor Martin Wattenberg and Professor Fernanda Viégas. The full write-up of this project can be found [here](Paper.pdf).
 
 
 
-## I. Visualizing Transformer Attention
+<!-- ## I. Visualizing Transformer Attention
 
 **AttentionViz.** The self-attention mechanism in transformer models plays a critical role in helping the model learn a rich set of relationships between input elements. To assist in our understanding of attention, [Yeh et al.](https://arxiv.org/abs/2305.03210) developed [AttentionViz](http://attentionviz.com/), a tool that enables the visualization of attention patterns at a more global scale. In particular, AttentionViz introduces a technique for jointly visualizing query and key vectors—two of the core components in computing attention—in a shared embedding space. In AttentionViz, every query and key (originally a 64-dimensional vector) is projected to a 2-dimensional embedding space using t-SNE or UMAP. Queries and keys are jointly displayed on the same plot, allowing for the visualization of distinct attention patterns among queries and keys.
 
@@ -36,4 +40,4 @@ A final metric that we experimented with is the *ratio of the median query norm 
 
 For each attention head, we can thus choose the scale factors $c$ that optimize the three metrics described above. For each of the metrics, we ran experiments with constants  $c \in [0.2, 0.4, 0.8, 1, 1.25, 2.5, 5]$. Future work could explore the results of a greater range and granularity of constant values. The optimal scaling constants for each metric are displayed in the heatmaps in Figure 1 below.
 
-## II. Exploring Induction Heads in BERT
+## II. Exploring Induction Heads in BERT -->
