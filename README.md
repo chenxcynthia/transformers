@@ -2,9 +2,9 @@
 
 Transformer models are improving at a rapid pace, making it of paramount importance to develop methods to explain, reverse-engineer, and visualize their inner workings. In this project, we study the interpretability of transformer models through a series of experiments divided into two parts:
 
-1. [Visualizing Transformer Attention](https://github.com/chenxcynthia/interp-research-2023/tree/main/Attention%20Visualization)
+1. [Visualizing Transformer Attention](https://chenxcynthia.github.io/projects/attention/)
    - Results published in paper [AttentionViz: A Global View of Transformer Attention](https://arxiv.org/pdf/2305.03210.pdf).
-3. [Exploring Induction Heads in BERT](https://github.com/chenxcynthia/interp-research-2023/tree/main/Induction%20Heads)
+3. [Exploring Induction Heads in BERT](https://chenxcynthia.github.io/projects/induction/)
 
 <!-- (#I.-Visualizing-Transformer-Attention)
 (#II.-Exploring-Induction-Heads-in-BERT) -->
