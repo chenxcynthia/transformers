@@ -1,4 +1,4 @@
-# Exploring Transformer Interpretability
+# Transformer interpretability research
 
 Transformer models are improving at a rapid pace, making it of paramount importance to develop methods to explain, reverse-engineer, and visualize their inner workings. In this project, we study the interpretability of transformer models through a series of experiments divided into two parts:
 
